@@ -63,7 +63,7 @@ to run use `npm run prestart`.
     - **`label`**: The text that appears on the button.
     - **`emoji`**: The emoji that appears on the button.
     - **`role_id`**: The ID of the role to assign or remove when the button is clicked.
-    - **`style`**: The button style. Can be `PRIMARY`, `SECONDARY`, `SUCCESS` or `DANGER` `.
+    - **`style`**: The button style. Can be `PRIMARY`, `SECONDARY`, `SUCCESS` or `DANGER`.
 
 ### Button Styles
 Here are the available styles for buttons:
