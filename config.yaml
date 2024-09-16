@@ -1,0 +1,35 @@
+reaction_buttons:
+  channels:
+    - channel_id: "123456789012345678"    # The ID of the channel where the buttons will be sent
+      message: "React to get a role!"     # Optional text message above the buttons
+      allow_multiple_roles: false         # Allow only one role at a time (set to true for multiple roles)
+      embed:                              # Optional embed configuration
+        title: "Role Selection"           # Title of the embed
+        description: "Choose your role below"  # Embed description
+        color: "#00FF00"                  # Color of the embed in hex format (green in this case)
+        footer:
+          text: "Footer text"             # Footer text
+          icon_url: "https://example.com/footer-icon.png"  # Optional footer icon URL
+        image:
+          url: "https://example.com/image.png"  # Optional image URL to include in the embed
+        thumbnail:
+          url: "https://example.com/thumbnail.png"  # Optional thumbnail image URL
+        fields:                              # Optional fields for the embed
+          - name: "Role 1"
+            value: "Select Role 1"
+            inline: true
+          - name: "Role 2"
+            value: "Select Role 2"
+            inline: true
+        author:                              # Optional author field for the embed
+          name: "Author Name"
+          url: "https://example.com/author"
+      buttons:                               # The list of buttons for role assignment
+        - label: "Join Role 1"               # Button label
+          emoji: "1️⃣"                       # Emoji for the button
+          role_id: "987654321098765432"      # Role ID to assign/remove when button is clicked
+          style: "PRIMARY"                   # Button style (PRIMARY = blue button)
+        - label: "Join Role 2"
+          emoji: "2️⃣"
+          role_id: "876543210987654321"
+          style: "SUCCESS"                   # Button style (SUCCESS = green button)

@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "reaction",
   "version": "1.0.0",
   "author": "todiscord",
   "description": "A template for creating Discord bots using Knub and TypeScript",
@@ -7,15 +7,21 @@
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc",
-    "test": "jest",
+    "test": "ts-node yamlParseTest.ts",
     "prestart": "ts-node src/index.ts"
   },
   "dependencies": {
     "discord.js": "^14.16.2",
     "dotenv": "^16.4.5",
+    "js-yaml": "^3.14.1",
     "knub": "^32.0.0-next.21",
+    "reaction": "file:",
+    "Reaction": "file:",
     "template": "file:",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "yaml": "^2.5.1",
+    "yawn-yaml": "github:dragory/yawn-yaml#string-number-fix-build",
+    "zod": "^3.23.8"
   },
   "license": "MIT",
   "devDependencies": {
