@@ -66,13 +66,12 @@ export async function sendReactionButtons(pluginData: GuildPluginData<ReactionBu
     );
 
     try {
-      const sentMessage = await channel.send({
+       await channel.send({
         content: channelConfig.message || undefined,
         embeds: embed ? [embed] : [],
         components: [row],
       });
 
-      console.log("Sent message with buttons:", sentMessage.id);
     } catch (error) {
       console.error("Error creating button", error);
     }

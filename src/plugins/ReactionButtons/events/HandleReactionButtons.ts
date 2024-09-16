@@ -39,10 +39,10 @@ export const handleReactionButtonInteraction = reactionButtonsEvt({
 
     if (member.roles.cache.has(role.id)) {
       await member.roles.remove(role);
-      await interaction.reply({ content: `Removed role: ${role.name}`, ephemeral: true });
+      await interaction.reply({ content: `Removed role: <@&${role.id}>`, ephemeral: true });
     } else {
       await member.roles.add(role);
-      await interaction.reply({ content: `Added role: ${role.name}`, ephemeral: true });
+      await interaction.reply({ content: `Added role: <@&${role.id}>`, ephemeral: true });
     }
   },
 });

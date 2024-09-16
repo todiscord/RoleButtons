@@ -78,7 +78,7 @@ const buttonSchema = z.object({
 const channelSchema = z.object({
   channel_id: zSnowflake,
   message: z.string().optional(),
-  embed: embedSchema.nullable(),
+  embed: embedSchema.nullable().optional(),
   allow_multiple_roles: z.boolean().optional().default(true),
   buttons: z.array(buttonSchema),
 });
