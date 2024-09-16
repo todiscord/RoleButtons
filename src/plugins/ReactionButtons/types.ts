@@ -3,7 +3,7 @@ import * as fs from "fs";
 import { loadYamlSafely } from "../../utils/loadYamlSafely";
 import { BasePluginType, guildPluginEventListener, guildPluginMessageCommand } from "knub";
 import { ButtonStyle } from "discord.js";
-import { hexToNumber } from "../../utils";
+import { hexToNumber, zSnowflake } from "../../utils";
 
 const nullableString = z.string().nullable();
 const nullableNumber = z.number().nullable();
@@ -76,7 +76,7 @@ const buttonSchema = z.object({
 });
 
 const channelSchema = z.object({
-  channel_id: z.string(),
+  channel_id: zSnowflake,
   message: z.string().optional(),
   embed: embedSchema.nullable(),
   allow_multiple_roles: z.boolean().optional().default(true),
